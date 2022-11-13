@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{389BE30B-25F9-4D24-B302-EB86E9B7571F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Grupo4_PAVI_Veterinaria</RootNamespace>
+    <AssemblyName>Grupo4_PAVI_Veterinaria</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConjuntoDeDatos\DatosConsultasXMes.cs">
+      <DependentUpon>DatosConsultasXMes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ConjuntoDeDatos\DatosConsultasXMes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatosConsultasXMes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ConjuntoDeDatos\DatosConsultasXRaza.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatosConsultasXRaza.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ConjuntoDeDatos\ListadoHC.cs">
+      <DependentUpon>ListadoHC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ConjuntoDeDatos\ListadoHC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ListadoHC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ConjuntoDeDatos\MedicamentosMasUsados.cs">
+      <DependentUpon>MedicamentosMasUsados.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ConjuntoDeDatos\MedicamentosMasUsados.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedicamentosMasUsados.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaMedica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaMedica.Designer.cs">
+      <DependentUpon>ConsultaMedica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaMedicamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaMedicamentos.Designer.cs">
+      <DependentUpon>ConsultaMedicamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultasPorRaza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultasPorRaza.Designer.cs">
+      <DependentUpon>ConsultasPorRaza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultasXMes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultasXMes.Designer.cs">
+      <DependentUpon>ConsultasXMes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Comunes.cs" />
+    <Compile Include="Datos\ConsultaMedicaBD.cs" />
+    <Compile Include="Datos\DueñosBD.cs" />
+    <Compile Include="Datos\EmpleadosBD.cs" />
+    <Compile Include="Datos\Parametro.cs" />
+    <Compile Include="Datos\PerrosBD.cs" />
+    <Compile Include="Datos\UsuariosBD.cs" />
+    <Compile Include="Entidades\Dueño.cs" />
+    <Compile Include="Entidades\Empleado.cs" />
+    <Compile Include="Entidades\Perro.cs" />
+    <Compile Include="Entidades\Usuario.cs" />
+    <Compile Include="ListadoHC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadoHC.Designer.cs">
+      <DependentUpon>ListadoHC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\abmcDueños\Dueños.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\abmcDueños\Dueños.Designer.cs">
+      <DependentUpon>Dueños.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\abmcEmpleados\NuevoEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\abmcEmpleados\NuevoEmpleado.Designer.cs">
+      <DependentUpon>NuevoEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\abmcUsuario\Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\abmcUsuario\Usuarios.Designer.cs">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\ABMC\Perros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\ABMC\Perros.Designer.cs">
+      <DependentUpon>Perros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\GrillaPerros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\GrillaPerros.Designer.cs">
+      <DependentUpon>GrillaPerros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\PrincipalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\PrincipalForm.Designer.cs">
+      <DependentUpon>PrincipalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProyectobasePAV1DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProyectobasePAV1DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="ConsultaMedica.resx">
+      <DependentUpon>ConsultaMedica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaMedicamentos.resx">
+      <DependentUpon>ConsultaMedicamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultasPorRaza.resx">
+      <DependentUpon>ConsultasPorRaza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultasXMes.resx">
+      <DependentUpon>ConsultasXMes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListadoHC.resx">
+      <DependentUpon>ListadoHC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\abmcDueños\Dueños.resx">
+      <DependentUpon>Dueños.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\abmcEmpleados\NuevoEmpleado.resx">
+      <DependentUpon>NuevoEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\abmcUsuario\Usuarios.resx">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\ABMC\Perros.resx">
+      <DependentUpon>Perros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\GrillaPerros.resx">
+      <DependentUpon>GrillaPerros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\PrincipalForm.resx">
+      <DependentUpon>PrincipalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ReporteListadoHC.rdlc" />
+    <EmbeddedResource Include="ReporteMedicamentos.rdlc" />
+    <EmbeddedResource Include="ReportesConsultasXMes.rdlc" />
+    <EmbeddedResource Include="ReportesRaza.rdlc" />
+    <None Include="ConjuntoDeDatos\DatosConsultasXMes.xsc">
+      <DependentUpon>DatosConsultasXMes.xsd</DependentUpon>
+    </None>
+    <None Include="ConjuntoDeDatos\DatosConsultasXMes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatosConsultasXMes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ConjuntoDeDatos\DatosConsultasXMes.xss">
+      <DependentUpon>DatosConsultasXMes.xsd</DependentUpon>
+    </None>
+    <None Include="ConjuntoDeDatos\DatosConsultasXRaza.xsc">
+      <DependentUpon>DatosConsultasXRaza.xsd</DependentUpon>
+    </None>
+    <None Include="ConjuntoDeDatos\DatosConsultasXRaza.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatosConsultasXRaza.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ConjuntoDeDatos\DatosConsultasXRaza.xss">
+      <DependentUpon>DatosConsultasXRaza.xsd</DependentUpon>
+    </None>
+    <None Include="ConjuntoDeDatos\ListadoHC.xsc">
+      <DependentUpon>ListadoHC.xsd</DependentUpon>
+    </None>
+    <None Include="ConjuntoDeDatos\ListadoHC.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ListadoHC.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ConjuntoDeDatos\ListadoHC.xss">
+      <DependentUpon>ListadoHC.xsd</DependentUpon>
+    </None>
+    <None Include="ConjuntoDeDatos\MedicamentosMasUsados.xsc">
+      <DependentUpon>MedicamentosMasUsados.xsd</DependentUpon>
+    </None>
+    <None Include="ConjuntoDeDatos\MedicamentosMasUsados.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MedicamentosMasUsados.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ConjuntoDeDatos\MedicamentosMasUsados.xss">
+      <DependentUpon>MedicamentosMasUsados.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="ProyectobasePAV1DataSet.xsc">
+      <DependentUpon>ProyectobasePAV1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProyectobasePAV1DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProyectobasePAV1DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProyectobasePAV1DataSet.xss">
+      <DependentUpon>ProyectobasePAV1DataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Actualizar.png" />
+    <Content Include="Resources\Eliminar.png" />
+    <Content Include="Resources\Limpiar.png" />
+    <Content Include="Resources\Registrar.png" />
+    <Content Include="Resources\Registro.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

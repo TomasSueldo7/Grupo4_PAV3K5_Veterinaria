@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MedicamentosMasUsados" targetNamespace="http://tempuri.org/MedicamentosMasUsados.xsd" xmlns:mstns="http://tempuri.org/MedicamentosMasUsados.xsd" xmlns="http://tempuri.org/MedicamentosMasUsados.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="MedicamentosMasUsados" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="MedicamentosMasUsados" msprop:Generator_DataSetName="MedicamentosMasUsados">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Medicamentos_x0020_Más_x0020_Usados" msprop:Generator_RowEvHandlerName="Medicamentos_Más_UsadosRowChangeEventHandler" msprop:Generator_RowDeletedName="Medicamentos_Más_UsadosRowDeleted" msprop:Generator_RowDeletingName="Medicamentos_Más_UsadosRowDeleting" msprop:Generator_RowEvArgName="Medicamentos_Más_UsadosRowChangeEvent" msprop:Generator_TablePropName="Medicamentos_Más_Usados" msprop:Generator_RowChangedName="Medicamentos_Más_UsadosRowChanged" msprop:Generator_RowChangingName="Medicamentos_Más_UsadosRowChanging" msprop:Generator_TableClassName="Medicamentos_Más_UsadosDataTable" msprop:Generator_RowClassName="Medicamentos_Más_UsadosRow" msprop:Generator_TableVarName="tableMedicamentos_Más_Usados" msprop:Generator_UserTableName="Medicamentos Más Usados">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Medicacion" msprop:Generator_ColumnPropNameInRow="Medicacion" msprop:Generator_ColumnPropNameInTable="MedicacionColumn" msprop:Generator_ColumnVarNameInTable="columnMedicacion" msprop:Generator_UserColumnName="Medicacion" type="xs:string" minOccurs="0" />
+              <xs:element name="Usos" msprop:Generator_ColumnPropNameInRow="Usos" msprop:Generator_ColumnPropNameInTable="UsosColumn" msprop:Generator_ColumnVarNameInTable="columnUsos" msprop:Generator_UserColumnName="Usos" type="xs:int" minOccurs="0" />
+              <xs:element name="Denominacion" msprop:Generator_ColumnPropNameInRow="Denominacion" msprop:Generator_ColumnPropNameInTable="DenominacionColumn" msprop:Generator_ColumnVarNameInTable="columnDenominacion" msprop:Generator_UserColumnName="Denominacion" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

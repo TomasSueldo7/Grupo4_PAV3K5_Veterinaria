@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ListadoHC" targetNamespace="http://tempuri.org/ListadoHC.xsd" xmlns:mstns="http://tempuri.org/ListadoHC.xsd" xmlns="http://tempuri.org/ListadoHC.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ListadoHC" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="ListadoHC" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ListadoHC">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Listado_x0020_de_x0020_HC" msprop:Generator_RowClassName="Listado_de_HCRow" msprop:Generator_RowEvHandlerName="Listado_de_HCRowChangeEventHandler" msprop:Generator_RowDeletedName="Listado_de_HCRowDeleted" msprop:Generator_RowDeletingName="Listado_de_HCRowDeleting" msprop:Generator_RowEvArgName="Listado_de_HCRowChangeEvent" msprop:Generator_TablePropName="Listado_de_HC" msprop:Generator_RowChangedName="Listado_de_HCRowChanged" msprop:Generator_UserTableName="Listado de HC" msprop:Generator_RowChangingName="Listado_de_HCRowChanging" msprop:Generator_TableClassName="Listado_de_HCDataTable" msprop:Generator_TableVarName="tableListado_de_HC">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Fecha" msprop:Generator_UserColumnName="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Descripcion" msprop:Generator_UserColumnName="Descripcion" msprop:Generator_ColumnPropNameInTable="DescripcionColumn" msprop:Generator_ColumnPropNameInRow="Descripcion" msprop:Generator_ColumnVarNameInTable="columnDescripcion" type="xs:string" minOccurs="0" />
+              <xs:element name="Medicacion" msprop:Generator_UserColumnName="Medicacion" msprop:Generator_ColumnPropNameInTable="MedicacionColumn" msprop:Generator_ColumnPropNameInRow="Medicacion" msprop:Generator_ColumnVarNameInTable="columnMedicacion" type="xs:string" minOccurs="0" />
+              <xs:element name="Nombre" msprop:Generator_UserColumnName="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre" type="xs:string" minOccurs="0" />
+              <xs:element name="Nro_HC" msprop:Generator_UserColumnName="Nro_HC" msprop:Generator_ColumnPropNameInTable="Nro_HCColumn" msprop:Generator_ColumnPropNameInRow="Nro_HC" msprop:Generator_ColumnVarNameInTable="columnNro_HC" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
