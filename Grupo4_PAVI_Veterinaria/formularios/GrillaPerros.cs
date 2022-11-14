@@ -20,7 +20,7 @@ namespace Grupo4_PAVI_Veterinaria.formularios
             gdr_perros.DataSource = PerrosBD.ObtenerGrilla();
 
         }
-
+        
         private void gdr_perros_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int indice = e.RowIndex;

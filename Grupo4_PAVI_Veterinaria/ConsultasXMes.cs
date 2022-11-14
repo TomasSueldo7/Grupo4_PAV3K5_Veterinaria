@@ -14,15 +14,25 @@ namespace Grupo4_PAVI_Veterinaria
 {
     public partial class ConsultasXMes : Form
     {
+        private string fechaDesde;
+        private string fechaHasta;
+
         public ConsultasXMes()
         {
+            InitializeComponent();
+        }
+
+        public ConsultasXMes(string fechaDesde, string fechaHasta)
+        {
+            this.fechaDesde = fechaDesde;
+            this.fechaHasta = fechaHasta;
             InitializeComponent();
         }
 
         private void ConsultasXMes_Load(object sender, EventArgs e)
         {
             DataTable tabla = new DataTable();
-            tabla = ConsultaMedicaBD.ObtenerListadoConsultasPorRaza();
+            tabla = ConsultaMedicaBD.ObtenerListadoConsultasPorRaza(fechaDesde,fechaHasta);
 
             ReportDataSource ds = new ReportDataSource("DatosConsultasXMes", tabla);
 

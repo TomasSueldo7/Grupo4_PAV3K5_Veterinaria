@@ -14,15 +14,25 @@ namespace Grupo4_PAVI_Veterinaria
 {
     public partial class ListadoHC : Form
     {
+        private string fechaDesde;
+        private string fechaHasta;
+
         public ListadoHC()
         {
+            InitializeComponent();
+        }
+
+        public ListadoHC(string fechaDesde, string fechaHasta)
+        {
+            this.fechaDesde = fechaDesde;
+            this.fechaHasta = fechaHasta;
             InitializeComponent();
         }
 
         private void ListadoHC_Load(object sender, EventArgs e)
         {
             DataTable tabla = new DataTable();
-            tabla = ConsultaMedicaBD.ObtenerListadoHC();
+            tabla = ConsultaMedicaBD.ObtenerListadoHC(fechaDesde, fechaHasta);
 
             ReportDataSource ds = new ReportDataSource("DatosListadoHC", tabla);
 

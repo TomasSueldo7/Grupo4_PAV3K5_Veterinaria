@@ -279,7 +279,7 @@ namespace Grupo4_PAVI_Veterinaria.ConjuntoDeDatos {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class Consultas_por_RazaDataTable : global::System.Data.TypedTableBase<Consultas_por_RazaRow> {
             
-            private global::System.Data.DataColumn columndenominacion;
+            private global::System.Data.DataColumn columnDenominacion;
             
             private global::System.Data.DataColumn columnCantidad;
             
@@ -318,9 +318,9 @@ namespace Grupo4_PAVI_Veterinaria.ConjuntoDeDatos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn denominacionColumn {
+            public global::System.Data.DataColumn DenominacionColumn {
                 get {
-                    return this.columndenominacion;
+                    return this.columnDenominacion;
                 }
             }
             
@@ -369,10 +369,10 @@ namespace Grupo4_PAVI_Veterinaria.ConjuntoDeDatos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Consultas_por_RazaRow AddConsultas_por_RazaRow(string denominacion, int Cantidad) {
+            public Consultas_por_RazaRow AddConsultas_por_RazaRow(string Denominacion, int Cantidad) {
                 Consultas_por_RazaRow rowConsultas_por_RazaRow = ((Consultas_por_RazaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        denominacion,
+                        Denominacion,
                         Cantidad};
                 rowConsultas_por_RazaRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowConsultas_por_RazaRow);
@@ -396,15 +396,15 @@ namespace Grupo4_PAVI_Veterinaria.ConjuntoDeDatos {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columndenominacion = base.Columns["denominacion"];
+                this.columnDenominacion = base.Columns["Denominacion"];
                 this.columnCantidad = base.Columns["Cantidad"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columndenominacion = new global::System.Data.DataColumn("denominacion", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndenominacion);
+                this.columnDenominacion = new global::System.Data.DataColumn("Denominacion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDenominacion);
                 this.columnCantidad = new global::System.Data.DataColumn("Cantidad", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCantidad);
             }
@@ -549,18 +549,18 @@ namespace Grupo4_PAVI_Veterinaria.ConjuntoDeDatos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string denominacion {
+            public string Denominacion {
                 get {
                     try {
-                        return ((string)(this[this.tableConsultas_por_Raza.denominacionColumn]));
+                        return ((string)(this[this.tableConsultas_por_Raza.DenominacionColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'denominacion\' de la tabla \'Consultas por Raza\' es DBNull." +
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Denominacion\' de la tabla \'Consultas por Raza\' es DBNull." +
                                 "", e);
                     }
                 }
                 set {
-                    this[this.tableConsultas_por_Raza.denominacionColumn] = value;
+                    this[this.tableConsultas_por_Raza.DenominacionColumn] = value;
                 }
             }
             
@@ -582,14 +582,14 @@ namespace Grupo4_PAVI_Veterinaria.ConjuntoDeDatos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsdenominacionNull() {
-                return this.IsNull(this.tableConsultas_por_Raza.denominacionColumn);
+            public bool IsDenominacionNull() {
+                return this.IsNull(this.tableConsultas_por_Raza.DenominacionColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetdenominacionNull() {
-                this[this.tableConsultas_por_Raza.denominacionColumn] = global::System.Convert.DBNull;
+            public void SetDenominacionNull() {
+                this[this.tableConsultas_por_Raza.DenominacionColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

@@ -45,8 +45,16 @@ namespace Grupo4_PAVI_Veterinaria.Datos
             }
         }
 
-        internal static DataTable ObtenerListadoMedicamentos()
+        internal static DataTable ObtenerListadoMedicamentos(String desde, String hasta)
         {
+            string diadesde = (desde[0]).ToString() + (desde[1]).ToString();
+            string mesdesde = (desde[3]).ToString() + (desde[4]).ToString();
+            string añodesde = (desde[6]).ToString() + (desde[7]).ToString() + (desde[8]).ToString() + (desde[9]).ToString();
+            string diahasta = (hasta[0]).ToString() + (hasta[1]).ToString();
+            string meshasta = (hasta[3]).ToString() + (hasta[4]).ToString();
+            string añohasta = (hasta[6]).ToString() + (hasta[7]).ToString() + (hasta[8]).ToString() + (hasta[9]).ToString();
+            string fecha1 = añodesde + "-" + mesdesde + "-" + diadesde;
+            string fecha2 = añohasta + "-" + meshasta + "-" + diahasta;
             string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
             SqlConnection cn = new SqlConnection(cadenaConexion);
             try
@@ -55,9 +63,10 @@ namespace Grupo4_PAVI_Veterinaria.Datos
 
                 //string consulta1 = "SELECT Nro_HC, Nombre, Fecha_nacimiento, Id_raza, Id_owner, Peso, Altura FROM Perros";
 
-                string consulta = "select r.Denominacion, m.Medicacion, COUNT(*) as 'Usos' from Consultas c JOIN MedicamentosXConsulta mc ON(c.Nro_HC = mc.Nro_HC AND c.Id_Consulta = mc.Id_consulta) JOIN Medicamentos m ON m.Id_medicamento = mc.Id_medicamento JOIN Perros p ON p.Nro_HC = c.Nro_HC JOIN Razas r ON r.Id_raza = p.Id_raza GROUP BY r.Denominacion, m.Medicacion ORDER BY COUNT(*) desc";
+                string consulta = "select r.Denominacion, m.Medicacion, COUNT(*) as 'Usos' from Consultas c JOIN MedicamentosXConsulta mc ON(c.Nro_HC = mc.Nro_HC AND c.Id_Consulta = mc.Id_consulta) JOIN Medicamentos m ON m.Id_medicamento = mc.Id_medicamento JOIN Perros p ON p.Nro_HC = c.Nro_HC JOIN Razas r ON r.Id_raza = p.Id_raza  where c.Fecha between @fecha1 and @fecha2 GROUP BY r.Denominacion, m.Medicacion ORDER BY COUNT(*) desc";
                 cmd.Parameters.Clear();
-
+                cmd.Parameters.AddWithValue("@fecha1", fecha1);
+                cmd.Parameters.AddWithValue("@fecha2", fecha2);
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = consulta;
 
@@ -81,8 +90,16 @@ namespace Grupo4_PAVI_Veterinaria.Datos
             }
         }
 
-        internal static DataTable ObtenerListadoHC()
+        internal static DataTable ObtenerListadoHC(String desde, String hasta)
         {
+            string diadesde = (desde[0]).ToString() + (desde[1]).ToString();
+            string mesdesde = (desde[3]).ToString() + (desde[4]).ToString();
+            string añodesde = (desde[6]).ToString() + (desde[7]).ToString() + (desde[8]).ToString() + (desde[9]).ToString();
+            string diahasta = (hasta[0]).ToString() + (hasta[1]).ToString();
+            string meshasta = (hasta[3]).ToString() + (hasta[4]).ToString();
+            string añohasta = (hasta[6]).ToString() + (hasta[7]).ToString() + (hasta[8]).ToString() + (hasta[9]).ToString();
+            string fecha1 = añodesde + "-" + mesdesde + "-" + diadesde;
+            string fecha2 = añohasta + "-" + meshasta + "-" + diahasta;
             string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
             SqlConnection cn = new SqlConnection(cadenaConexion);
             try
@@ -91,9 +108,10 @@ namespace Grupo4_PAVI_Veterinaria.Datos
 
                 //string consulta1 = "SELECT Nro_HC, Nombre, Fecha_nacimiento, Id_raza, Id_owner, Peso, Altura FROM Perros";
 
-                string consulta = "select CONVERT(varchar,c.Fecha, 103) as Fecha, s.Descripcion, m.Medicacion, p.Nombre, p.Nro_HC  from Consultas c JOIN MedicamentosXConsulta mc ON(c.Nro_HC = mc.Nro_HC AND c.Id_Consulta = mc.Id_consulta) JOIN Medicamentos m ON m.Id_medicamento = mc.Id_medicamento JOIN SintomasXConsultas sc ON(sc.Id_consulta = c.Id_Consulta AND c.Nro_HC = sc.Nro_HC) JOIN Sintomas s ON s.Id_sintoma = sc.Id_sintoma JOIN Perros p ON p.Nro_HC = c.Nro_HC GROUP BY Fecha, s.Descripcion, m.Medicacion, p.Nombre, p.Nro_HC ORDER BY Fecha desc";
+                string consulta = "select CONVERT(varchar,c.Fecha, 103) as Fecha, s.Descripcion, m.Medicacion, p.Nombre, p.Nro_HC  from Consultas c JOIN MedicamentosXConsulta mc ON(c.Nro_HC = mc.Nro_HC AND c.Id_Consulta = mc.Id_consulta) JOIN Medicamentos m ON m.Id_medicamento = mc.Id_medicamento JOIN SintomasXConsultas sc ON(sc.Id_consulta = c.Id_Consulta AND c.Nro_HC = sc.Nro_HC) JOIN Sintomas s ON s.Id_sintoma = sc.Id_sintoma JOIN Perros p ON p.Nro_HC = c.Nro_HC where c.Fecha between @fecha1 and @fecha2 GROUP BY Fecha, s.Descripcion, m.Medicacion, p.Nombre, p.Nro_HC ORDER BY Fecha desc";
                 cmd.Parameters.Clear();
-
+                cmd.Parameters.AddWithValue("@fecha1", fecha1);
+                cmd.Parameters.AddWithValue("@fecha2", fecha2);
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = consulta;
 
@@ -117,19 +135,28 @@ namespace Grupo4_PAVI_Veterinaria.Datos
             }
         }
 
-        internal static DataTable ObtenerListadoConsultasPorRaza()
+        internal static DataTable ObtenerListadoConsultasPorRaza(String desde, String hasta)
         {
+            string diadesde = (desde[0]).ToString() + (desde[1]).ToString();
+            string mesdesde = (desde[3]).ToString() + (desde[4]).ToString();
+            string añodesde = (desde[6]).ToString() + (desde[7]).ToString() + (desde[8]).ToString() + (desde[9]).ToString();
+            string diahasta = (hasta[0]).ToString() + (hasta[1]).ToString();
+            string meshasta = (hasta[3]).ToString() + (hasta[4]).ToString();
+            string añohasta = (hasta[6]).ToString() + (hasta[7]).ToString() + (hasta[8]).ToString() + (hasta[9]).ToString();
+            string fecha1 = añodesde + "-" + mesdesde + "-" + diadesde;
+            string fecha2 = añohasta + "-" + meshasta + "-" + diahasta;
             string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
             SqlConnection cn = new SqlConnection(cadenaConexion);
             try
             {
                 SqlCommand cmd = new SqlCommand();
 
-                string consulta = "select month(c.Fecha) as Fecha, count(c.Id_Consulta) as Cantidad from Consultas c group by month(c.Fecha)";
-                //string consulta = "Select DATENAME(MONTH,c.Fecha) as Mes, count(c.Id_Consulta) as Cantidad from Consultas c group by DATENAME(MONTH,c.Fecha)";
+                //string consulta = "select month(c.Fecha) as Fecha, count(c.Id_Consulta) as Cantidad from Consultas c group by month(c.Fecha)";
+                string consulta = "Select DATENAME(MONTH,c.Fecha) as Mes, count(c.Id_Consulta) as Cantidad from Consultas c where c.Fecha between @fecha1 and @fecha2 group by DATENAME(MONTH,c.Fecha)";
 
                 cmd.Parameters.Clear();
-
+                cmd.Parameters.AddWithValue("@fecha1", fecha1);
+                cmd.Parameters.AddWithValue("@fecha2", fecha2);
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = consulta;
 

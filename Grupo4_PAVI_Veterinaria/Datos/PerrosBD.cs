@@ -50,20 +50,29 @@ namespace Grupo4_PAVI_Veterinaria.Datos
 
         }
 
-        internal static DataTable ObtenerListadoConsultasPorRaza()
+        internal static DataTable ObtenerListadoConsultasPorRaza(String desde, String hasta)
         {
+            string diadesde = (desde[0]).ToString() + (desde[1]).ToString();
+            string mesdesde = (desde[3]).ToString() + (desde[4]).ToString();
+            string añodesde = (desde[6]).ToString() + (desde[7]).ToString() + (desde[8]).ToString() + (desde[9]).ToString();
+            string diahasta = (hasta[0]).ToString() + (hasta[1]).ToString();
+            string meshasta = (hasta[3]).ToString() + (hasta[4]).ToString();
+            string añohasta = (hasta[6]).ToString() + (hasta[7]).ToString() + (hasta[8]).ToString() + (hasta[9]).ToString();
+            string fecha1 = añodesde + "-" + mesdesde + "-" + diadesde;
+            string fecha2 = añohasta + "-" + meshasta + "-" + diahasta;
             string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
             SqlConnection cn = new SqlConnection(cadenaConexion);
             try
             {
                 SqlCommand cmd = new SqlCommand();
 
-                //string consulta1 = "SELECT Nro_HC, Nombre, Fecha_nacimiento, Id_raza, Id_owner, Peso, Altura FROM Perros";
+                //string consulta = "SELECT Nro_HC, Nombre, Fecha_nacimiento, Id_raza, Id_owner, Peso, Altura FROM Perros";
 
-                string consulta = "select r.denominacion, count(c.id_consulta) as Cantidad from razas r JOIN perros p ON r.id_raza=p.id_raza JOIN consultas c ON p.Nro_HC=c.Nro_HC group by r.denominacion";
+                string consulta = "select r.Denominacion, count(c.id_consulta) as Cantidad from razas r JOIN perros p ON r.id_raza=p.id_raza JOIN consultas c ON p.Nro_HC=c.Nro_HC where c.Fecha between @fecha1 and @fecha2 group by r.Denominacion";
 
                 cmd.Parameters.Clear();
-
+                cmd.Parameters.AddWithValue("@fecha1", fecha1);
+                cmd.Parameters.AddWithValue("@fecha2", fecha2);
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = consulta;
 

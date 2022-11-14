@@ -14,8 +14,18 @@ namespace Grupo4_PAVI_Veterinaria
 {
     public partial class ConsultasPorRaza : Form
     {
+        private string fechaDesde;
+        private string fechaHasta;
+
         public ConsultasPorRaza()
         {
+            InitializeComponent();
+        }
+
+        public ConsultasPorRaza(string fechaDesde, string fechaHasta)
+        {
+            this.fechaDesde = fechaDesde;
+            this.fechaHasta = fechaHasta;
             InitializeComponent();
         }
 
@@ -28,7 +38,7 @@ namespace Grupo4_PAVI_Veterinaria
         private void reportViewer1_Load(object sender, EventArgs e)
         {
             DataTable tabla = new DataTable();
-            tabla = PerrosBD.ObtenerListadoConsultasPorRaza();
+            tabla = PerrosBD.ObtenerListadoConsultasPorRaza(fechaDesde, fechaHasta);
 
             ReportDataSource ds = new ReportDataSource("DatosConsultasXRaza", tabla);
 

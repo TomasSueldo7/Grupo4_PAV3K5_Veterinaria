@@ -108,5 +108,11 @@ namespace Grupo4_PAVI_Veterinaria.formularios
             ListadoHC ventana = new ListadoHC();
             ventana.ShowDialog();
         }
+
+        private void crearReporteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Creacion_de_Reporte ventana = new Creacion_de_Reporte();
+            ventana.ShowDialog();
+        }
     }
 }

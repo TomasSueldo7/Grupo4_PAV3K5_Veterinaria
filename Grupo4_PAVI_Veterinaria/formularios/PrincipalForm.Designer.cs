@@ -40,13 +40,10 @@ namespace Grupo4_PAVI_Veterinaria.formularios
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarConsultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultasPorMesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearReporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblBienvenido = new System.Windows.Forms.Label();
-            this.consultasPorMesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.listadoDeHCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reporteMedicamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,28 +75,28 @@ namespace Grupo4_PAVI_Veterinaria.formularios
             // nuevoToolStripMenuItem
             // 
             this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.nuevoToolStripMenuItem.Text = "Perros";
             this.nuevoToolStripMenuItem.Click += new System.EventHandler(this.nuevoToolStripMenuItem_Click);
             // 
             // empleadosToolStripMenuItem1
             // 
             this.empleadosToolStripMenuItem1.Name = "empleadosToolStripMenuItem1";
-            this.empleadosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.empleadosToolStripMenuItem1.Size = new System.Drawing.Size(132, 22);
             this.empleadosToolStripMenuItem1.Text = "Empleados";
             this.empleadosToolStripMenuItem1.Click += new System.EventHandler(this.empleadosToolStripMenuItem1_Click);
             // 
             // usuariosToolStripMenuItem
             // 
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // dueñosToolStripMenuItem
             // 
             this.dueñosToolStripMenuItem.Name = "dueñosToolStripMenuItem";
-            this.dueñosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dueñosToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.dueñosToolStripMenuItem.Text = "Dueños";
             this.dueñosToolStripMenuItem.Click += new System.EventHandler(this.dueñosToolStripMenuItem_Click);
             // 
@@ -121,20 +118,17 @@ namespace Grupo4_PAVI_Veterinaria.formularios
             // reportesToolStripMenuItem
             // 
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.consultasPorMesToolStripMenuItem,
-            this.consultasPorMesToolStripMenuItem1,
-            this.listadoDeHCToolStripMenuItem,
-            this.reporteMedicamentosToolStripMenuItem});
+            this.crearReporteToolStripMenuItem});
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.reportesToolStripMenuItem.Text = "Reportes";
             // 
-            // consultasPorMesToolStripMenuItem
+            // crearReporteToolStripMenuItem
             // 
-            this.consultasPorMesToolStripMenuItem.Name = "consultasPorMesToolStripMenuItem";
-            this.consultasPorMesToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.consultasPorMesToolStripMenuItem.Text = "Consultas Por Raza";
-            this.consultasPorMesToolStripMenuItem.Click += new System.EventHandler(this.consultasPorMesToolStripMenuItem_Click);
+            this.crearReporteToolStripMenuItem.Name = "crearReporteToolStripMenuItem";
+            this.crearReporteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.crearReporteToolStripMenuItem.Text = "Crear Reporte";
+            this.crearReporteToolStripMenuItem.Click += new System.EventHandler(this.crearReporteToolStripMenuItem_Click);
             // 
             // ayudaToolStripMenuItem
             // 
@@ -161,27 +155,6 @@ namespace Grupo4_PAVI_Veterinaria.formularios
             this.lblBienvenido.TabIndex = 1;
             this.lblBienvenido.Text = "Bienvenido";
             this.lblBienvenido.Click += new System.EventHandler(this.lblBienvenido_Click);
-            // 
-            // consultasPorMesToolStripMenuItem1
-            // 
-            this.consultasPorMesToolStripMenuItem1.Name = "consultasPorMesToolStripMenuItem1";
-            this.consultasPorMesToolStripMenuItem1.Size = new System.Drawing.Size(197, 22);
-            this.consultasPorMesToolStripMenuItem1.Text = "Consultas Por Mes";
-            this.consultasPorMesToolStripMenuItem1.Click += new System.EventHandler(this.consultasPorMesToolStripMenuItem1_Click);
-            // 
-            // listadoDeHCToolStripMenuItem
-            // 
-            this.listadoDeHCToolStripMenuItem.Name = "listadoDeHCToolStripMenuItem";
-            this.listadoDeHCToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.listadoDeHCToolStripMenuItem.Text = "Listado de HC";
-            this.listadoDeHCToolStripMenuItem.Click += new System.EventHandler(this.listadoDeHCToolStripMenuItem_Click);
-            // 
-            // reporteMedicamentosToolStripMenuItem
-            // 
-            this.reporteMedicamentosToolStripMenuItem.Name = "reporteMedicamentosToolStripMenuItem";
-            this.reporteMedicamentosToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.reporteMedicamentosToolStripMenuItem.Text = "Reporte Medicamentos";
-            this.reporteMedicamentosToolStripMenuItem.Click += new System.EventHandler(this.reporteMedicamentosToolStripMenuItem_Click);
             // 
             // PrincipalForm
             // 
@@ -217,9 +190,6 @@ namespace Grupo4_PAVI_Veterinaria.formularios
         private ToolStripMenuItem ayudaToolStripMenuItem;
         private ToolStripMenuItem acercaDeToolStripMenuItem;
         private ToolStripMenuItem dueñosToolStripMenuItem;
-        private ToolStripMenuItem consultasPorMesToolStripMenuItem;
-        private ToolStripMenuItem consultasPorMesToolStripMenuItem1;
-        private ToolStripMenuItem listadoDeHCToolStripMenuItem;
-        private ToolStripMenuItem reporteMedicamentosToolStripMenuItem;
+        private ToolStripMenuItem crearReporteToolStripMenuItem;
     }
 }

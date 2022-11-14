@@ -118,6 +118,12 @@
     <Compile Include="ConsultasXMes.Designer.cs">
       <DependentUpon>ConsultasXMes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Creacion de Reporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Creacion de Reporte.Designer.cs">
+      <DependentUpon>Creacion de Reporte.cs</DependentUpon>
+    </Compile>
     <Compile Include="Datos\Comunes.cs" />
     <Compile Include="Datos\ConsultaMedicaBD.cs" />
     <Compile Include="Datos\DueñosBD.cs" />
@@ -196,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultasXMes.resx">
       <DependentUpon>ConsultasXMes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Creacion de Reporte.resx">
+      <DependentUpon>Creacion de Reporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListadoHC.resx">
       <DependentUpon>ListadoHC.cs</DependentUpon>

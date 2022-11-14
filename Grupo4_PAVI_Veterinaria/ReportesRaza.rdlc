@@ -62,33 +62,33 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>4.33885cm</Width>
+              <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.33885cm</Width>
+              <Width>2.5cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.73229cm</Height>
+              <Height>0.6cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox20">
+                    <Textbox Name="Textbox1">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>denominacion</Value>
+                              <Value>Denominacion</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox20</rd:DefaultName>
+                      <rd:DefaultName>Textbox1</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -104,7 +104,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox16">
+                    <Textbox Name="Textbox3">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -118,7 +118,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox16</rd:DefaultName>
+                      <rd:DefaultName>Textbox3</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -135,25 +135,25 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.73229cm</Height>
+              <Height>0.6cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="denominacion">
+                    <Textbox Name="Denominacion">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!denominacion.Value</Value>
+                              <Value>=Fields!Denominacion.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>denominacion</rd:DefaultName>
+                      <rd:DefaultName>Denominacion</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -218,10 +218,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DatosConsultasXRaza</DataSetName>
-        <Top>2.32516cm</Top>
-        <Left>4.60058cm</Left>
-        <Height>1.46458cm</Height>
-        <Width>8.6777cm</Width>
+        <Top>2.56328cm</Top>
+        <Left>5.67245cm</Left>
+        <Height>1.2cm</Height>
+        <Width>5cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -233,7 +233,7 @@
     <Height>2in</Height>
     <Style />
   </Body>
-  <Width>6.07292in</Width>
+  <Width>6.60776in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
@@ -268,8 +268,8 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="denominacion">
-          <DataField>denominacion</DataField>
+        <Field Name="Denominacion">
+          <DataField>Denominacion</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Cantidad">
@@ -279,7 +279,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DatosConsultasXRaza</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\santi\OneDrive\Escritorio\TERCER AÑO\PAV 1\Copia de seguridad\Grupo4_PAVI_Veterinaria\Grupo4_PAVI_Veterinaria\ConjuntoDeDatos\DatosConsultasXRaza.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\santi\OneDrive\Escritorio\TERCER AÑO\PAV 1\ultima\Grupo4_PAVI_Veterinaria\ConjuntoDeDatos\DatosConsultasXRaza.xsd</rd:SchemaPath>
         <rd:TableName>Consultas por Raza</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />

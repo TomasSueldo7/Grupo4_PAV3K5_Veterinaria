@@ -279,7 +279,7 @@ namespace Grupo4_PAVI_Veterinaria.ConjuntoDeDatos {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class Consultas_por_MesDataTable : global::System.Data.TypedTableBase<Consultas_por_MesRow> {
             
-            private global::System.Data.DataColumn columnFecha;
+            private global::System.Data.DataColumn columnMes;
             
             private global::System.Data.DataColumn columnCantidad;
             
@@ -318,9 +318,9 @@ namespace Grupo4_PAVI_Veterinaria.ConjuntoDeDatos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn FechaColumn {
+            public global::System.Data.DataColumn MesColumn {
                 get {
-                    return this.columnFecha;
+                    return this.columnMes;
                 }
             }
             
@@ -369,10 +369,10 @@ namespace Grupo4_PAVI_Veterinaria.ConjuntoDeDatos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Consultas_por_MesRow AddConsultas_por_MesRow(string Fecha, int Cantidad) {
+            public Consultas_por_MesRow AddConsultas_por_MesRow(string Mes, int Cantidad) {
                 Consultas_por_MesRow rowConsultas_por_MesRow = ((Consultas_por_MesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Fecha,
+                        Mes,
                         Cantidad};
                 rowConsultas_por_MesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowConsultas_por_MesRow);
@@ -396,15 +396,15 @@ namespace Grupo4_PAVI_Veterinaria.ConjuntoDeDatos {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnFecha = base.Columns["Fecha"];
+                this.columnMes = base.Columns["Mes"];
                 this.columnCantidad = base.Columns["Cantidad"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnFecha = new global::System.Data.DataColumn("Fecha", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFecha);
+                this.columnMes = new global::System.Data.DataColumn("Mes", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMes);
                 this.columnCantidad = new global::System.Data.DataColumn("Cantidad", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCantidad);
             }
@@ -549,17 +549,17 @@ namespace Grupo4_PAVI_Veterinaria.ConjuntoDeDatos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Fecha {
+            public string Mes {
                 get {
                     try {
-                        return ((string)(this[this.tableConsultas_por_Mes.FechaColumn]));
+                        return ((string)(this[this.tableConsultas_por_Mes.MesColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Fecha\' de la tabla \'Consultas por Mes\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Mes\' de la tabla \'Consultas por Mes\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableConsultas_por_Mes.FechaColumn] = value;
+                    this[this.tableConsultas_por_Mes.MesColumn] = value;
                 }
             }
             
@@ -581,14 +581,14 @@ namespace Grupo4_PAVI_Veterinaria.ConjuntoDeDatos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsFechaNull() {
-                return this.IsNull(this.tableConsultas_por_Mes.FechaColumn);
+            public bool IsMesNull() {
+                return this.IsNull(this.tableConsultas_por_Mes.MesColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetFechaNull() {
-                this[this.tableConsultas_por_Mes.FechaColumn] = global::System.Convert.DBNull;
+            public void SetMesNull() {
+                this[this.tableConsultas_por_Mes.MesColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

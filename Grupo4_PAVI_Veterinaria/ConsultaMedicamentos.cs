@@ -14,15 +14,25 @@ namespace Grupo4_PAVI_Veterinaria
 {
     public partial class ConsultaMedicamentos : Form
     {
+        private string fechaDesde;
+        private string fechaHasta;
+
         public ConsultaMedicamentos()
         {
+            InitializeComponent();
+        }
+
+        public ConsultaMedicamentos(string fechaDesde, string fechaHasta)
+        {
+            this.fechaDesde = fechaDesde;
+            this.fechaHasta = fechaHasta;
             InitializeComponent();
         }
 
         private void ConsultaMedicamentos_Load(object sender, EventArgs e)
         {
             DataTable tabla = new DataTable();
-            tabla = ConsultaMedicaBD.ObtenerListadoMedicamentos();
+            tabla = ConsultaMedicaBD.ObtenerListadoMedicamentos(fechaDesde, fechaHasta);
 
             ReportDataSource ds = new ReportDataSource("MedicamentosMasUsados", tabla);
 
