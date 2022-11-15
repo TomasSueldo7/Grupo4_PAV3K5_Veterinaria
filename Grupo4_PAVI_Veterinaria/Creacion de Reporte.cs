@@ -38,7 +38,7 @@ namespace Grupo4_PAVI_Veterinaria
         private void btnCrear_Click(object sender, EventArgs e)
         {
 
-            if (txtDesde.Text != "" || txtHasta.Text != "")
+            if (txtDesde.Text != "  /  /" || txtHasta.Text != "  /  /")
             {
                 crearReporte();
             }
